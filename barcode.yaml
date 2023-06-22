@@ -1,0 +1,25 @@
+# 条形码生成器配置文件
+#
+# 默认按以下顺序读取配置文件（也可以没有配置文件，没有配置文件时，收件人姓名手机号无法修改）
+# - {XDG_CONFIG_HOME}/barcode/barcode.yaml
+# - {HOME}/.config/barcode/barcode.yaml
+# - {HOME}/.barcode.yaml
+
+# 可选: auto, dark, light
+theme: light
+# 收货人姓名，指定姓名和是否默认显示
+username:
+    text: '收件方: 李明 '
+    show: true
+# 收货人手机号，指定手机号和是否默认显示
+mobile:
+    text: 15612345678
+    show: true
+# 运单号，可以随机生成申通(1)、顺丰(44)、圆通(85)、中通(115)、德邦(131)、邮政EMS(118)、邮政快递包裹(132)、百世(3)、极兔(384)、京东(340)、天天(119)的运单号
+tracking_number:
+    ship_id: 1
+    show: true
+# 默认不会自动刷新条码（enable字段不要修改），以及按下s键开启自动刷新时的刷新间隔（秒，整数）
+auto_refresh:
+    interval: 3
+    enable: false
